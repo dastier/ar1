@@ -5,12 +5,14 @@
 
 <body style="margin : 0px; overflow: hidden;">
   <a-scene embedded arjs>
+    <a-assets>
+      <a-asset-item id="glb-asset" src="Fox.glb"></a-asset-item>
+    </a-assets>
     <!-- <a-marker-camera type='pattern' url='https://raw.githubusercontent.com/dastier/ar1/main/pattern-qr-code.patt'> -->
-    <a-marker preset="hiro">
-      <a-entity position="0 0 0" scale="1 1 1"
-        gltf-model="https://raw.githubusercontent.com/dastier/ar1/main/Fox.glb">
+    <a-marker-camera preset="hiro">
+      <a-entity position="0 0 0" scale="1 1 1" gltf-model="#glb-asset">
       </a-entity>
-    </a-marker>
+    </a-marker-camera>
     <a-entity camera></a-entity>
   </a-scene>
 </body>
